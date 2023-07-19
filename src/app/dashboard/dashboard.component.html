@@ -1,0 +1,25 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle 
+      </button>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+        <mat-toolbar>
+            <button mat-icon-button (click)="drawer.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <span>
+                <h1 appFont >listas</h1>
+            </span>
+            <span class="example-spacer"></span>
+          </mat-toolbar>
+          <h1 class="al" appFont >Alumnos</h1>
+          <main>
+            <app-users></app-users>
+          </main>
+    </div>
+  </mat-drawer-container>
+ 
+   
