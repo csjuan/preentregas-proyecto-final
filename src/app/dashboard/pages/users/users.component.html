@@ -2,6 +2,6 @@
     + Alumnos
   </button>
 
-  <app-table  [dataSource]="alumnos"  (quitaralumno)="borraralumno($event)" (editalumno)="editaralumno($event)"  >  </app-table>
+  <app-table  [dataSource]="(alumnos | async) || []"  (quitaralumno)="borraralumno($event)" (editalumno)="editaralumno($event)"  >  </app-table>
   
  

@@ -1,6 +1,6 @@
  
 <div  mat-dialog-content>
-    <h1 appFont >agregar/editar alumno</h1>
+    <h1 appFont >{{ editarAlumno ? 'editar' : 'crear usuario'}}</h1>
     <form [formGroup]="userform" class="">
         <div class="col">
             <mat-form-field appearance="outline" >

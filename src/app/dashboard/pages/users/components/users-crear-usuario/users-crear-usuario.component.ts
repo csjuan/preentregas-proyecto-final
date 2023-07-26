@@ -11,6 +11,7 @@ import { alumnos } from '../modelos';
   styleUrls: ['./users-crear-usuario.component.scss']
 })
 export class UsersCrearUsuarioComponent {
+    editarAlumno?: alumnos
     controlnombre = new FormControl<string>('', [Validators.required]);
     controlapellido = new FormControl<string>('', [Validators.required]);
     controldireccion = new FormControl<string>('', Validators.required);
@@ -29,6 +30,7 @@ export class UsersCrearUsuarioComponent {
         @Inject(MAT_DIALOG_DATA) private data?: alumnos,
         ) {
             if (this.data) {
+                this.editarAlumno = this.data;
                 this.controlnombre.setValue(this.data.name);
                 this.controlapellido.setValue(this.data.apellido);
                 this.controldireccion.setValue(this.data.direccion);
